@@ -52,14 +52,13 @@ Cada línea que escribas te acerca un poco más a convertirte en desarrollador.�
 1. [Introducción al lenguaje y el programa “Hola Mundo”](#capitulo-1-introduccion-hola-mundo)  
 2. [Tipos de datos y variables](#capitulo-2-tipos-datos-variables)  
 3. [Tipos de datos compuestos](#capitulo-3-tipos-datos-compuestos)  
-4. [Operadores](#capitulo-4-operadores)  
-5. [Estructuras de control](#capitulo-5-estructuras-control)  
-6. [Funciones](#capitulo-6-funciones)  
-7. [Clases y objetos](#capitulo-7-clases-objetos)  
-8. [Manejo de errores y excepciones](#capitulo-8-errores-excepciones)  
-9. [Programación asíncrona](#capitulo-9-programacion-asincrona)  
-10. [Buenas prácticas](#capitulo-10-buenas-practicas)  
-11. [Epílogo](#epilogo)  
+4. [Estructuras de control](#capitulo-4-estructuras-control)  
+5. [Funciones](#capitulo-5-funciones)  
+6. [Clases y objetos](#capitulo-6-clases-objetos)  
+7. [Manejo de errores y excepciones](#capitulo-7-errores-excepciones)  
+8. [Programación asíncrona](#capitulo-8-programacion-asincrona)  
+9. [Buenas prácticas](#capitulo-9-buenas-practicas)  
+10. [Epílogo](#epilogo)  
 
 ---
 
@@ -227,6 +226,8 @@ En Dart existen estructuras que permiten agrupar varios valores en una misma var
 A estas estructuras se las conoce como **tipos de datos compuestos**, y las más utilizadas son las **Listas**, los **Sets** y los **Maps**.  
 Además, Dart incorpora un sistema de **Null Safety**, que ayuda a evitar errores relacionados con valores nulos.
 
+---
+
 ## 3.1 Listas
 
 Una lista es una colección **ordenada** de elementos, donde cada uno tiene una posición identificada por un **índice**.  
@@ -369,16 +370,22 @@ void main() {
    - Elimina el número 5.  
    - Muestra el tamaño final de la lista.
 
+---
+
 2. Crea un conjunto llamado `paises` con los valores `'Ecuador'`, `'Perú'`, `'Colombia'`, `'Ecuador'`.  
    - Imprime el conjunto y observa qué ocurre con los duplicados.  
    - Agrega `'Chile'`.  
    - Verifica si `'Perú'` está presente.
+
+---
 
 3. Crea un mapa llamado `usuario` con las claves y valores siguientes:  
    - `'nombre'`: `'Carlos'`  
    - `'edad'`: `30`  
    - `'correo'`: `'carlos@mail.com'`  
    Luego agrega la clave `'pais'` con el valor `'Ecuador'`, actualiza la edad a `31`, y muestra todos los pares clave-valor en consola.
+
+---
 
 4. Declara una variable `int? puntos;` sin asignarle valor.  
    - Usa el operador `??` para mostrar `0` si es null.  
@@ -387,12 +394,12 @@ void main() {
 
 ---
 
-<a name="capitulo-4-operadores"></a>
-# 4. Operadores
+<a name="capitulo-3-operadores"></a>
+# 3. Operadores
 
 Los operadores permiten realizar operaciones con valores: sumar, restar, comparar y asignar, entre otras. En Dart se dividen en varias categorías.  
 
-## 4.1. Operadores aritméticos
+## 3.1. Operadores aritméticos
 
 Se utilizan para operaciones matemáticas básicas:
 
@@ -417,7 +424,7 @@ void main() {
 }
 ```
 
-## 4.2. Operadores relacionales y lógicos
+## 3.2. Operadores relacionales y lógicos
 
 Los operadores **relacionales** comparan dos valores y devuelven un valor booleano (`true` o `false`):
 
@@ -444,7 +451,7 @@ void main() {
 }
 ```
 
-## 4.3. Operadores de asignación
+## 3.3. Operadores de asignación
 
 Permiten asignar y combinar operaciones en una sola expresión:
 
@@ -463,7 +470,7 @@ void main() {
 }
 ```
 
-## 4.4. Precedencia y orden de evaluación
+## 3.4. Precedencia y orden de evaluación
 
 Los operadores tienen un **orden de precedencia** que determina cómo se evalúan las expresiones. La multiplicación y división tienen mayor prioridad que la suma y la resta. Los paréntesis `()` modifican el orden de evaluación.
 
@@ -477,7 +484,7 @@ void main() {
 }
 ```
 
-## 4.5. Ejercicios propuestos
+## 3.5. Ejercicios propuestos
 
 1. Escribe un programa que calcule el total de la factura de tres productos (precios a tu elección) y muestre el precio final.  
 2. Declara dos números y utiliza operadores relacionales y lógicos para determinar si ambos son pares.  
@@ -485,12 +492,12 @@ void main() {
 
 ---
 
-<a name="capitulo-5-estructuras-control"></a>
-# 5. Estructuras de control
+<a name="capitulo-4-estructuras-control"></a>
+# 4. Estructuras de control
 
 Las estructuras de control permiten dirigir el flujo de ejecución de un programa: tomar decisiones, repetir acciones y controlar cuándo finalizar ciertos procesos.
 
-## 5.1. Condicionales `if`, `else if` y `else`
+## 4.1. Condicionales `if`, `else if` y `else`
 
 La estructura `if` evalúa una condición y ejecuta un bloque si es verdadera. Puedes añadir un bloque `else` para el caso contrario y tantos `else if` como necesites.
 
@@ -508,7 +515,7 @@ void main() {
 }
 ```
 
-## 5.2. Operador ternario
+## 4.2. Operador ternario
 
 Es una versión abreviada del `if` que se usa para asignar valores rápidos:
 
@@ -520,9 +527,9 @@ void main() {
 }
 ```
 
-## 5.3. Estructuras repetitivas
+## 4.3. Estructuras repetitivas
 
-### 5.3.1. Bucle `for`
+### 4.3.1. Bucle `for`
 
 Se usa cuando se conoce cuántas veces se desea repetir una acción.
 
@@ -534,7 +541,7 @@ void main() {
 }
 ```
 
-### 5.3.2. Bucle `while`
+### 4.3.2. Bucle `while`
 
 Se ejecuta mientras la condición sea verdadera. Es útil cuando el número de iteraciones depende de una condición externa.
 
@@ -548,7 +555,7 @@ void main() {
 }
 ```
 
-### 5.3.3. Bucle `do-while`
+### 4.3.3. Bucle `do-while`
 
 A diferencia de `while`, este bucle asegura que el bloque se ejecute al menos una vez, ya que la condición se verifica al final.
 
@@ -562,7 +569,7 @@ void main() {
 }
 ```
 
-## 5.4. Control dentro de los bucles
+## 4.4. Control dentro de los bucles
 
 Dart dispone de palabras clave para alterar la ejecución de un bucle:
 
@@ -579,9 +586,9 @@ void main() {
 }
 ```
 
-## 5.5. Recorrer colecciones
+## 4.5. Recorrer colecciones
 
-### 5.5.1. Bucle `for-in`
+### 4.5.1. Bucle `for-in`
 
 Se utiliza para recorrer listas, conjuntos o mapas de manera simple:
 
@@ -594,7 +601,7 @@ void main() {
 }
 ```
 
-### 5.5.2. Método `forEach()`
+### 4.5.2. Método `forEach()`
 
 Ejecuta una función anónima por cada elemento de una lista:
 
@@ -607,7 +614,7 @@ void main() {
 }
 ```
 
-### 5.5.3. Transformar colecciones con `map()`
+### 4.5.3. Transformar colecciones con `map()`
 
 El método `map()` aplica una función a cada elemento y devuelve una nueva colección transformada. Es útil para procesar datos sin modificar la lista original.
 
@@ -620,7 +627,7 @@ void main() {
 }
 ```
 
-## 5.6. Sentencia `switch`
+## 4.6. Sentencia `switch`
 
 Evalúa una expresión y ejecuta el bloque que coincide con el valor. Es útil cuando se tienen varios casos posibles.
 
@@ -643,7 +650,7 @@ void main() {
 }
 ```
 
-## 5.7. Ejercicios propuestos
+## 4.7. Ejercicios propuestos
 
 1. Implementa un programa que, dado un número del 1 al 7, muestre el día de la semana correspondiente utilizando `switch`.  
 2. Escribe un programa que imprima todos los números pares del 1 al 20 usando un bucle `for` y la instrucción `continue` para omitir los impares.  
@@ -652,12 +659,12 @@ void main() {
 
 ---
 
-<a name="capitulo-6-funciones"></a>
-# 6. Funciones
+<a name="capitulo-5-funciones"></a>
+# 5. Funciones
 
 Una función es un bloque de código reutilizable que realiza una tarea específica. Su uso permite organizar el programa, evitar duplicaciones y mejorar la legibilidad.
 
-## 6.1. Declaración y retorno de valores
+## 5.1. Declaración y retorno de valores
 
 Una función se declara indicando el tipo de valor que devuelve, su nombre y los parámetros que recibe.
 
@@ -674,7 +681,7 @@ void main() {
 
 En este ejemplo, la función `sumar` recibe dos enteros y devuelve su suma. El tipo de retorno (`int`) aparece antes del nombre de la función. Cuando una función no devuelve un valor, se declara con el tipo `void`.
 
-## 6.2. Funciones sin retorno
+## 5.2. Funciones sin retorno
 
 ```dart
 void saludar(String nombre) {
@@ -688,11 +695,11 @@ void main() {
 
 La función `saludar()` imprime un mensaje pero no devuelve valores, por lo que su tipo es `void`.
 
-## 6.3. Parámetros posicionales y nombrados
+## 5.3. Parámetros posicionales y nombrados
 
 En Dart, los parámetros pueden ser **posicionales** (se pasan en el orden en que se declaran) o **nombrados** (se pasan utilizando el nombre del parámetro).
 
-### 6.3.1. Parámetros posicionales
+### 5.3.1. Parámetros posicionales
 
 ```dart
 void mostrarDatos(String nombre, int edad) {
@@ -704,7 +711,7 @@ void main() {
 }
 ```
 
-### 6.3.2. Parámetros nombrados
+### 5.3.2. Parámetros nombrados
 
 Los parámetros nombrados se definen entre llaves y se pueden marcar como `required`.
 
@@ -721,7 +728,7 @@ void main() {
 
 Los parámetros con valores por defecto (como `edad = 18`) se utilizan cuando no se proporciona un valor en la llamada.
 
-## 6.4. Parámetros opcionales y valores por defecto
+## 5.4. Parámetros opcionales y valores por defecto
 
 Los parámetros opcionales posicionales se declaran entre corchetes `[]`.
 
@@ -738,7 +745,7 @@ void main() {
 
 También pueden combinarse parámetros opcionales y nombrados para mejorar la legibilidad.
 
-## 6.5. Funciones anónimas y flecha
+## 5.5. Funciones anónimas y flecha
 
 Una función anónima no tiene nombre y se utiliza generalmente como argumento de otra función.
 
@@ -761,7 +768,7 @@ void main() {
 }
 ```
 
-## 6.6. Funciones como valores (callbacks)
+## 5.6. Funciones como valores (callbacks)
 
 En Dart, las funciones son valores de primera clase: se pueden asignar a variables, pasar como parámetros y devolver desde otras funciones. Cuando se pasa una función como parámetro a otra función para que la ejecute más tarde, se denomina **callback**.
 
@@ -780,7 +787,7 @@ void main() {
 
 Aquí, la función `ejecutarOperacion` recibe otra función (`operacion`) y la ejecuta con los valores indicados. Este patrón es común en programación asíncrona y en bibliotecas como Flutter para manejar eventos.
 
-## 6.7. Ámbito de variables (scope)
+## 5.7. Ámbito de variables (scope)
 
 El ámbito determina dónde es visible una variable.  
 
@@ -804,7 +811,7 @@ void main() {
 - `contadorGlobal` es accesible en cualquier parte del archivo.  
 - Mantener los ámbitos claros evita colisiones de nombres y hace el código más legible.
 
-## 6.8. Ejercicios propuestos
+## 5.8. Ejercicios propuestos
 
 1. Crea una función que reciba dos números y devuelva su promedio. Llámala desde `main()` e imprime el resultado.  
 2. Escribe una función que reciba una lista de nombres y los imprima en mayúsculas utilizando `forEach()` y una función anónima.  
@@ -814,18 +821,18 @@ void main() {
 
 ---
 
-<a name="capitulo-7-clases-objetos"></a>
-# 7. Clases y objetos
+<a name="capitulo-6-clases-objetos"></a>
+# 6. Clases y objetos
 
 La **programación orientada a objetos (POO)** organiza el código en torno a **objetos**, que combinan datos (atributos) y comportamientos (métodos). Dart es un lenguaje orientado a objetos: todo valor es una instancia de una clase.  
 
-## 7.1. ¿Qué es una clase y qué es un objeto?
+## 6.1. ¿Qué es una clase y qué es un objeto?
 
 Una **clase** define un conjunto de características y comportamientos comunes. Es como un plano o plantilla.  
 Un **objeto** es una instancia concreta de esa clase, con valores propios para cada atributo.  
 Por ejemplo, si tenemos una clase `Animal` que describe a los animales, un perro o un gato serán objetos específicos de esa clase.
 
-## 7.2. Atributos y métodos
+## 6.2. Atributos y métodos
 
 Los **atributos** son variables que representan las características de un objeto.  
 Los **métodos** son funciones asociadas a la clase, que definen las acciones que un objeto puede realizar.
@@ -856,11 +863,11 @@ void main() {
 
 En este ejemplo, `nombre` y `edad` son atributos, y `comer()` y `dormir()` son métodos. Cada objeto de la clase `Animal` tendrá sus propios valores para los atributos.
 
-## 7.3. Constructores
+## 6.3. Constructores
 
 Un **constructor** es un método especial que se ejecuta al crear un objeto y se utiliza para inicializar sus atributos. Existen constructores con parámetros posicionales y nombrados.
 
-### 7.3.1. Constructor con parámetros posicionales
+### 6.3.1. Constructor con parámetros posicionales
 
 ```dart
 class Animal {
@@ -881,7 +888,7 @@ void main() {
 }
 ```
 
-### 7.3.2. Constructor con parámetros nombrados
+### 6.3.2. Constructor con parámetros nombrados
 
 ```dart
 class Animal {
@@ -904,7 +911,7 @@ void main() {
 
 Los constructores nombrados permiten especificar el valor de cada atributo usando su nombre, lo que mejora la legibilidad cuando hay muchos parámetros.
 
-## 7.4. Encapsulamiento, getters y setters
+## 6.4. Encapsulamiento, getters y setters
 
 El **encapsulamiento** protege los datos de una clase para que no se modifiquen de manera inapropiada desde fuera de ella.  
 En Dart, los nombres que comienzan con `_` son privados para el archivo en el que se encuentran. Puedes definir **getters** y **setters** para acceder y modificar esos valores de forma controlada.
@@ -942,12 +949,12 @@ void main() {
 }
 ```
 
-## 7.5. Herencia y clases derivadas
+## 6.5. Herencia y clases derivadas
 
 La **herencia** permite crear nuevas clases basadas en otra clase existente. La clase base se denomina **superclase**, y la clase que hereda se llama **subclase**.  
 Las subclases heredan los atributos y métodos de la superclase, pero también pueden agregar nuevos comportamientos o sobrescribir métodos existentes.
 
-### 7.5.1. Ejemplo de herencia con animales
+### 6.5.1. Ejemplo de herencia con animales
 
 ```dart
 class Animal {
@@ -1000,7 +1007,7 @@ void main() {
 }
 ```
 
-### 7.5.2. Sobrescritura de métodos
+### 6.5.2. Sobrescritura de métodos
 
 Las subclases pueden redefinir un método heredado para personalizar su comportamiento. Para ello se usa la anotación `@override`.
 
@@ -1029,7 +1036,7 @@ void main() {
 }
 ```
 
-## 7.6. Ejercicios propuestos
+## 6.6. Ejercicios propuestos
 
 1. Crea una clase `Libro` con los atributos `titulo`, `autor` y `anioPublicacion`. Agrega un método que imprima esta información.  
 2. Define una clase `Empleado` con los atributos `nombre`, `cargo` y `salario`. Crea una subclase `Vendedor` que añada el atributo `comision` y sobrescriba un método para calcular el salario total.  
@@ -1038,14 +1045,14 @@ void main() {
 
 ---
 
-<a name="capitulo-8-errores-excepciones"></a>
-# 8. Manejo de errores y excepciones
+<a name="capitulo-7-errores-excepciones"></a>
+# 7. Manejo de errores y excepciones
 
 En un programa pueden ocurrir situaciones inesperadas, como intentar acceder a un índice fuera de una lista o convertir un texto no numérico en un número.  
 Estas situaciones se llaman **excepciones**, y manejarías sus errores permite que el programa no se detenga abruptamente.  
 Dart proporciona estructuras como `try`, `catch`, `on`, `finally` y `throw` para capturar y controlar estos eventos.
 
-## 8.1. Captura básica con `try` y `catch`
+## 7.1. Captura básica con `try` y `catch`
 
 El bloque `try` contiene el código que podría generar una excepción. Si ocurre un error, el bloque `catch` lo captura.
 
@@ -1067,7 +1074,7 @@ Al capturarla con `catch`, el programa evita interrumpirse y continúa su ejecuc
 
 > **Nota:** La división normal (`/`) con cero en Dart no lanza una excepción; devuelve `Infinity`, `-Infinity` o `NaN` según el caso. La división entera (`~/`) sí genera la excepción.
 
-## 8.2. Uso de `on` y tipos específicos
+## 7.2. Uso de `on` y tipos específicos
 
 Puedes capturar excepciones específicas usando la sentencia `on`.
 
@@ -1086,7 +1093,7 @@ void main() {
 }
 ```
 
-## 8.3. Trazas de pila (stack trace)
+## 7.3. Trazas de pila (stack trace)
 
 Puedes obtener información detallada sobre dónde ocurrió la excepción capturando el **stack trace**.
 
@@ -1103,7 +1110,7 @@ void main() {
 
 El segundo parámetro de `catch` almacena la traza de ejecución, útil para depurar.
 
-## 8.4. Bloque `finally`
+## 7.4. Bloque `finally`
 
 El bloque `finally` se ejecuta siempre, ocurra o no una excepción. Se utiliza para liberar recursos, cerrar conexiones o mostrar mensajes finales.
 
@@ -1120,7 +1127,7 @@ void main() {
 }
 ```
 
-## 8.5. Generar excepciones con `throw`
+## 7.5. Generar excepciones con `throw`
 
 Puedes lanzar excepciones manualmente para indicar que algo no está bien.
 
@@ -1142,7 +1149,7 @@ void main() {
 }
 ```
 
-## 8.6. Excepciones personalizadas
+## 7.6. Excepciones personalizadas
 
 Puedes crear tus propias clases de excepciones para casos específicos. Estas clases implementan la interfaz `Exception`.
 
@@ -1169,7 +1176,7 @@ void main() {
 }
 ```
 
-## 8.7. Ejercicios propuestos
+## 7.7. Ejercicios propuestos
 
 1. Crea un programa que solicite dos números e intente dividirlos. Captura el caso de división por cero con `try` y `catch`.  
 2. Escribe un programa que reciba un valor de tipo `String` y lo convierta a entero. Maneja el caso en que el valor no sea numérico con un bloque `catch`.  
@@ -1178,13 +1185,13 @@ void main() {
 
 ---
 
-<a name="capitulo-9-programacion-asincrona"></a>
-# 9. Programación asíncrona
+<a name="capitulo-8-programacion-asincrona"></a>
+# 8. Programación asíncrona
 
 En muchos casos, los programas deben realizar operaciones que toman tiempo: leer archivos, consultar bases de datos o esperar una respuesta de internet. Si estas operaciones se ejecutaran de manera estrictamente secuencial, el programa se bloquearía hasta que cada una terminara.  
 Para evitarlo, Dart incluye un modelo de **programación asíncrona** que permite ejecutar tareas de larga duración sin detener el flujo principal.
 
-## 9.1. Concepto de asincronía
+## 8.1. Concepto de asincronía
 
 Una operación asíncrona se ejecuta sin bloquear las instrucciones que siguen.  
 En Dart, las operaciones asíncronas se representan mediante la clase `Future`, que actúa como una promesa de que un valor estará disponible en el futuro.  
@@ -1203,7 +1210,7 @@ void main() {
 
 La función `Future.delayed()` ejecuta su callback después del tiempo indicado. La salida muestra que el programa no se bloquea mientras espera.
 
-## 9.2. La clase `Future` y el método `then()`
+## 8.2. La clase `Future` y el método `then()`
 
 Un `Future<T>` representa un valor de tipo `T` que estará disponible más adelante. Puedes manejarlo con el método `then()`:
 
@@ -1223,7 +1230,7 @@ void main() {
 }
 ```
 
-## 9.3. Uso de `async` y `await`
+## 8.3. Uso de `async` y `await`
 
 Las palabras clave `async` y `await` permiten escribir código asíncrono con un estilo más similar al código secuencial.
 
@@ -1246,7 +1253,7 @@ void main() async {
 - `await` suspende la ejecución dentro de la función hasta que el `Future` se resuelva.  
 - El hilo principal no se bloquea; simplemente espera dentro de la función asíncrona.
 
-## 9.4. Manejo de errores en funciones asíncronas
+## 8.4. Manejo de errores en funciones asíncronas
 
 Puedes combinar `async` y `await` con bloques `try` y `catch` para manejar excepciones dentro de funciones asíncronas.
 
@@ -1268,7 +1275,7 @@ void main() async {
 }
 ```
 
-## 9.5. Ejecutar múltiples operaciones asíncronas
+## 8.5. Ejecutar múltiples operaciones asíncronas
 
 Cuando se tienen varias tareas asíncronas, puedes esperar a que todas se completen con `Future.wait()`.
 
@@ -1290,7 +1297,7 @@ void main() async {
 }
 ```
 
-## 9.6. Flujos de datos con `Stream`
+## 8.6. Flujos de datos con `Stream`
 
 Un `Stream` representa una secuencia de valores que se generan a lo largo del tiempo. Se utiliza para manejar eventos o datos que llegan progresivamente.
 
@@ -1315,7 +1322,7 @@ void main() async {
 
 Los flujos también pueden emitir errores. Puedes capturarlos con un bloque `try` y `catch` dentro de la construcción `await for`.
 
-## 9.7. Ejercicios propuestos
+## 8.7. Ejercicios propuestos
 
 1. Crea una función `descargarArchivo()` que simule la descarga de un archivo con un retardo de 3 segundos e imprima un mensaje al finalizar.  
 2. Implementa dos funciones asíncronas que devuelvan resultados en distintos tiempos y usa `Future.wait()` para ejecutarlas en paralelo.  
@@ -1324,12 +1331,12 @@ Los flujos también pueden emitir errores. Puedes capturarlos con un bloque `try
 
 ---
 
-<a name="capitulo-10-buenas-practicas"></a>
-# 10. Buenas prácticas
+<a name="capitulo-9-buenas-practicas"></a>
+# 9. Buenas prácticas
 
 Aprender un lenguaje no solo consiste en conocer su sintaxis, sino también en aplicar **buenas prácticas** para escribir código legible, mantenible y coherente. A continuación se presentan recomendaciones generales para el desarrollo en Dart.
 
-## 10.1. Convenciones de nomenclatura
+## 9.1. Convenciones de nomenclatura
 
 Seguir un estilo de nombres consistente facilita la lectura del código:
 
@@ -1341,7 +1348,7 @@ Seguir un estilo de nombres consistente facilita la lectura del código:
 
 > Dart no utiliza `SCREAMING_SNAKE_CASE` para constantes como en otros lenguajes. Prefiere `camelCase` o, en Flutter, `kPascalCase`.
 
-## 10.2. Uso de variables y constantes
+## 9.2. Uso de variables y constantes
 
 - Declara variables con el tipo más adecuado.  
 - Usa `final` para valores que no deberían cambiar tras su asignación, y `const` cuando el valor sea literal y conocido en tiempo de compilación.  
@@ -1352,7 +1359,7 @@ final nombre = 'Ana';      // asignado una vez
 const pi = 3.1416;         // constante de compilación
 ```
 
-## 10.3. Comentarios claros y útiles
+## 9.3. Comentarios claros y útiles
 
 Los comentarios deben explicar **por qué** haces algo, no repetir lo que el código ya expresa claramente. Para documentar funciones o clases públicas, utiliza comentarios de documentación (`///`).
 
@@ -1365,7 +1372,7 @@ double calcularArea(double radio) {
 }
 ```
 
-## 10.4. Principio de responsabilidad única
+## 9.4. Principio de responsabilidad única
 
 Cada función o clase debe tener una sola responsabilidad. Esto facilita el mantenimiento y la reutilización.
 
@@ -1381,7 +1388,7 @@ class GestorUsuarios {
 }
 ```
 
-## 10.5. Evitar código duplicado
+## 9.5. Evitar código duplicado
 
 Repetir fragmentos de código hace que sea más difícil de mantener. Extrae la lógica repetida en funciones reutilizables.
 
@@ -1393,7 +1400,7 @@ double calcularPromedio(List<double> valores) {
 }
 ```
 
-## 10.6. Null safety: uso de `?`, `??` y `!`
+## 9.6. Null safety: uso de `?`, `??` y `!`
 
 Dart incorpora **null safety** para evitar errores comunes al trabajar con valores nulos.  
 
@@ -1413,13 +1420,13 @@ void main() {
 }
 ```
 
-## 10.7. Manejo adecuado de errores
+## 9.7. Manejo adecuado de errores
 
 - Anticipa las excepciones y captura solo las que puedas manejar.  
 - No utilices excepciones como flujo normal del programa.  
 - Proporciona mensajes claros y acciones concretas cuando se produce un error.  
 
-## 10.8. Comparaciones entre malas y buenas prácticas
+## 9.8. Comparaciones entre malas y buenas prácticas
 
 | **Malas prácticas** | **Buenas prácticas** |
 | --- | --- |
@@ -1429,7 +1436,7 @@ void main() {
 | No manejar excepciones en operaciones que pueden fallar (división entre cero, conversiones) | Uso de `try`/`catch` y mensajes claros |
 | Comentarios redundantes que repiten el código | Comentarios que explican la intención o el propósito |
 
-## 10.9. Ejercicios propuestos
+## 9.9. Ejercicios propuestos
 
 1. Reescribe una función que imprima un mensaje usando nombres descriptivos para variables y funciones.  
 2. Refactoriza una porción de código con duplicación (por ejemplo, calcular promedios en varias partes) para centralizar la lógica en una única función.  
